@@ -1,0 +1,39 @@
+# Python 
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+
+# Entornos virtuales
+.venv/
+.env
+.envrc
+*.venv
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Archivos de configuración y dependencias
+instance/
+settings.py
+*.log
+*.pot
+*.pyc
+*.pyo
+
+# VS Code
+.vscode/
+.history/
+
+# Flask & Deploy
+*.pid
+instance/
+*.swp
+.well-known/
+
+# Cachés y archivos temporales
+*.cache
+*.bak
+*.swp
+*.swo

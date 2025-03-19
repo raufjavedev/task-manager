@@ -1,0 +1,59 @@
+<!-- MODAL: Crear Tarea -->
+<div id="createTaskModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+    <div class="bg-gray-800 p-6 rounded-lg w-96 shadow-lg">
+        <!-- Título del Modal -->
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold text-white">Crear Nueva Tarea</h2>
+            <button onclick="closeCreateTaskModal()" class="text-gray-400 hover:text-gray-200">
+                <i class="fas fa-times text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Formulario -->
+        <div class="space-y-3">
+            <!-- Título -->
+            <div>
+                <label for="new-task-title" class="text-gray-300 font-semibold">Título</label>
+                <input id="new-task-title" type="text" placeholder="Escribe un título..."
+                    class="w-full px-3 py-2 mt-1 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <!-- Descripción -->
+            <div>
+                <label for="new-task-desc" class="text-gray-300 font-semibold">Descripción</label>
+                <textarea id="new-task-desc" placeholder="Detalles de la tarea..."
+                    class="w-full px-3 py-2 mt-1 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+
+            <!-- Fecha de Vencimiento -->
+            <div>
+                <label for="new-task-date" class="text-gray-300 font-semibold">Fecha de Vencimiento</label>
+                <input id="new-task-date" type="date"
+                    class="w-full px-3 py-2 mt-1 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <!-- Estado -->
+            <div>
+                <label for="new-task-status" class="text-gray-300 font-semibold">Estado</label>
+                <select id="new-task-status"
+                    class="w-full px-3 py-2 mt-1 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="En Progreso">En Progreso</option>
+                    <option value="Completada">Completado</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Botones -->
+        <div class="flex justify-end gap-3 mt-5">
+            <button onclick="closeCreateTaskModal()"
+                class="px-4 py-2 rounded-lg text-gray-300 bg-gray-600 hover:bg-gray-500 transition">
+                Cancelar
+            </button>
+            <button onclick="createTask()"
+                class="px-4 py-2 rounded-lg text-white bg-green-500 hover:bg-green-600 transition">
+                Guardar
+            </button>
+        </div>
+    </div>
+</div>

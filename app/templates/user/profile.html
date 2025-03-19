@@ -1,0 +1,87 @@
+<!-- Modal -->
+<div id="profileModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-gray-800 text-white w-96 p-6 rounded-lg shadow-lg">
+        <!-- Modal Header -->
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-semibold">Perfil de Usuario</h2>
+            <button id="closeProfileModal" class="text-gray-300 hover:text-gray-500">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="space-y-4">
+            <div id="created-at">
+
+            </div>
+            <!-- Id -->
+            <div class="hidden">
+                <label class="text-md font-semibold text-gray-300">Id</label>
+                <input type="text" id="user-id"
+                    class="w-full px-3 py-2 mt-1 bg-gray-800 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <!-- Nombre Completo -->
+            <div>
+                <label class="text-md font-semibold text-gray-300">Nombre Completo</label>
+                <input type="text" id="full-name"
+                    class="w-full px-3 py-2 mt-1 bg-gray-800 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <!-- Nombre de Usuario -->
+            <div>
+                <label class="text-md font-semibold text-gray-300">Nombre de Usuario</label>
+                <input type="text" id="username-input"
+                    class="w-full px-3 py-2 mt-1 bg-gray-800 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <!-- Correo Electrónico -->
+            <div>
+                <label class="text-md font-semibold text-gray-300">Correo Electrónico</label>
+                <input type="email" id="email"
+                    class="w-full px-3 py-2 mt-1 bg-gray-800 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+        </div>
+
+
+        <!-- Modal Footer -->
+        <div class="flex justify-between mt-6">
+            <button onclick="updateUser()"
+                class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded transition duration-300">
+                Editar
+            </button>
+            <button id="deleteProfileBtn" onclick="deleteUser()"
+                class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded transition duration-300">
+                Eliminar
+            </button>
+            <button id="closeProfileModalBtn"
+                class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded transition duration-300">
+                Cerrar
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Obtener los elementos
+    const openProfileModal = document.getElementById('openProfileModal');
+    const closeProfileModal = document.getElementById('closeProfileModal');
+    const closeProfileModalBtn = document.getElementById('closeProfileModalBtn');
+    const profileModal = document.getElementById('profileModal');
+    const editProfileBtn = document.getElementById('editProfileBtn');
+    const deleteProfileBtn = document.getElementById('deleteProfileBtn');
+
+    // Función para abrir el modal
+    openProfileModal.addEventListener('click', () => {
+        profileModal.classList.remove('hidden');
+    });
+
+    // Función para cerrar el modal
+    closeProfileModal.addEventListener('click', () => {
+        profileModal.classList.add('hidden');
+    });
+
+    closeProfileModalBtn.addEventListener('click', () => {
+        profileModal.classList.add('hidden');
+    });
+
+</script>
